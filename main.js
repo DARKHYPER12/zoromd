@@ -125,7 +125,7 @@ const logger = Pino({
 }).child({ class: 'baileys'})
 
 const connectionOptions = {
-  printQRInTerminal: !usePairingCode,
+  printQRInTerminal: true,
   patchMessageBeforeSending: (message) => {
     const requiresPatch = !!( message.buttonsMessage || message.templateMessage || message.listMessage );
     if (requiresPatch) {
